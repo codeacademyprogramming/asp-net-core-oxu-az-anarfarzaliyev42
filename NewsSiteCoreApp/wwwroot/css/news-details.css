@@ -1,0 +1,266 @@
+@media only screen and (min-width: 768px) {
+  .footer .social-logos {
+    width: 40%;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .social-logos {
+    width: 100% !important;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .copyright-email {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .coronavirus-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .when {
+    display: none !important;
+  }
+  .stats {
+    display: none !important;
+  }
+  .banner {
+    display: none !important;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .news-container {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    margin-right: 100px;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #13317F;
+  font-family: "Cond-ProMedium";
+}
+
+p {
+  font-size: 18px;
+  word-break:break-all;
+}
+
+@font-face {
+  font-family: "Cond-ProMedium";
+  src: url("~/fonts/PFDinTextCondPro-Medium.ttf");
+}
+
+.wrapper {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 940px;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+  height: 56px;
+  margin-top: 0;
+}
+
+.footer {
+  color: #aaa;
+  font-weight: bold;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.copyright-email {
+  overflow: hidden;
+  width: 60%;
+}
+
+.copyright {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-email {
+  color: #aaa;
+}
+
+.news-container {
+  width: 590px;
+  min-height: 1100px;
+  margin-left: 110px;
+  padding-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.news {
+  position: relative;
+  z-index: 1;
+}
+
+.news img {
+  width: 620px;
+  height: 304px;
+}
+
+.news-img {
+  display: inline-block;
+  vertical-align: top;
+  min-height: 100px;
+}
+
+.when {
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+  left: -110px;
+}
+
+.when-date {
+  padding: 6px 15px;
+  background-color: #1894A0;
+}
+
+.when-date, .when-time {
+    color: #fff;
+    text-align: center;
+    font-family: "Cond-ProMedium", Arial, sans-serif;
+}
+
+.when-time {
+  padding: 5px 15px 3px;
+  background-color: #334564;
+  font-weight: bold;
+}
+
+.stats {
+  left: -110px;
+  color: #aaaaaa;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: default;
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 107px;
+}
+
+.stats-item-container:last-child {
+  border-bottom-width: 1px;
+}
+
+.stats-item-container:first-child {
+  top: -15px;
+  border-bottom-width: 1px;
+}
+
+.stats-item-container {
+  position: relative;
+  z-index: 1;
+  color: #757575;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 38px;
+  border: 0 solid #dddddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 1px 1px 0 1px;
+}
+
+.stats-item-container .stats-item::before {
+  width: 21px;
+  height: 12px;
+  background-position: 80.11363636363636% 51.773049645390074%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.stats_views .stats-item:before {
+  background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+  background-repeat: no-repeat;
+  vertical-align: 0;
+}
+
+.stats_likes .stats-item:before {
+  background-position: 93.95604395604396% 70.8955223880597%;
+  width: 15px;
+  height: 19px;
+  background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+  background-repeat: no-repeat;
+}
+
+.stats_dislikes .stats-item:before {
+  background-position: 69.23076923076923% 70.8955223880597%;
+  width: 15px;
+  height: 19px;
+  background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+  background-repeat: no-repeat;
+}
+
+.stats_likes, .stats_dislikes {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3));
+  background-image: linear-gradient(180deg, #fff, #f3f3f3);
+}
+
+.stats_likes:hover, .stats_dislikes:hover {
+  background-image: none;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer;
+}
+
+.banner {
+  position: absolute;
+  z-index: 1;
+  right: -240px;
+  top: 0;
+  width: 230px;
+}
+
+.banner img {
+  width: 100%;
+  height: 90px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky2 {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+}

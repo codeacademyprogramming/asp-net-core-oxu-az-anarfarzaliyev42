@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<News>
+@section styles{
+    <link rel="stylesheet" href="~/css/style.css" />
+}
+
+<section class="news-list">
+    @foreach (var news in Model)
+    {
+        <div class="news-item">
+            <a class="news-item-inner" href="/home/details/@news.Id">
+                <div class="news-item-img-container">
+                    <div class="news-item-img" style="background: url('@Url.Content($"~/news-images/{news.FileName}")');"></div>
+                </div>
+                <div class="news-item-content">
+                    <div class="when">
+                        <div class="when-date">
+                            <div class="date-day">@news.Date.Day&nbsp;</div>
+                            <div class="date-month">@news.Date.ToString("MMM")</div>
+                            <div class="date-year">@news.Date.Year</div>
+                        </div>
+                        <div class="when-time">@news.Date.ToString("HH:mm")</div>
+                    </div>
+                    <div class="title">
+                        @news.Title
+                    </div>
+                    <div class="description"></div>
+                </div>
+            </a>
+            <div class="stats" data-id="@news.Id">
+                <div class="stats-item-container stats-like-active stats_likes">
+                    <span class="stats-item">@news.Likes</span>
+                </div>
+                <div class="stats-item-container stats-like-active stats_dislikes">
+                    <span class="stats-item">@news.Dislikes</span>
+                </div>
+                <div class="stats-item-container stats_views">
+                    <span class="stats-item">@news.Views</span>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+
+@section Scripts{
+    <script>
+        $(function () {
+
+            var headerContainer = $(".header-container");
+            var sticky = $(headerContainer).offset().top;
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() > sticky) {
+                    $(headerContainer).addClass("sticky")
+
+                }
+                else if ($(window).scrollTop() == sticky) {
+                    $(headerContainer).removeClass("sticky");
+                }
+               
+            })
+        })
+    </script>
+
+
+}

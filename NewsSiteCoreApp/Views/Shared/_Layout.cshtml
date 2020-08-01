@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    @RenderSection("styles", required: false)
+    <title>Oxu az</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header-container">
+            <div class="wrapper">
+                <a class="logo logo-oxu" href="/">oxu.az</a>
+                <div class="header-side">
+                    <a class="oxu-link" href="/pages/about">Haqqımızda</a>
+                    <a class="oxu-link" href="/pages/advertise">Reklam</a>
+                    <div class="social-logos">
+                        <a class="social-logos-item social-logos-item_facebook"
+                           href="//facebook.com/421309791269484">Facebook</a>
+                        <a class="social-logos-item social-logos-item_twitter"
+                           href="//twitter.com/oxuaz">Twitter</a>
+                        <a class="social-logos-item social-logos-item_android"
+                           href="https://play.google.com/store/apps/details?id=az.start.android.oxu">Android App</a>
+                        <a class="social-logos-item social-logos-item_ios"
+                           href="https://itunes.apple.com/app/id634362981">iOS App</a>
+                    </div>
+                    <div class="search-toggle" title="Axtarış"></div>
+                    <div class="search-container">
+                        <form>
+                            <input class="search-input"
+                                   placeholder="Axtarış" />
+                            <button class="search-submit"
+                                    type="submit"
+                                    value="Axtar"></button>
+                        </form>
+                    </div>
+                    <a class="lang-switcher lang-switcher_ru" href="https://ru.oxu.az/">ru</a>
+                </div>
+
+                <div class="nav-toggle">Kateqoriyalar</div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="wrapper">
+                <nav class="nav">
+                    <a class="nav-item" href="/">Baş səhifə</a><a class="nav-item" href="/politics">Siyasət</a><a class="nav-item" href="/economy">İqtisadiyyat</a><a class="nav-item" href="/society">Cəmiyyət</a><a class="nav-item" href="/showbiz">Şou-biznes</a><a class="nav-item" href="/war">Müharibə</a><a class="nav-item" href="/sport">İdman</a><a class="nav-item" href="/criminal">Kriminal</a><a class="nav-item" href="/culture">Mədəniyyət</a><a class="nav-item" href="/world">Dünya</a><a class="nav-item" href="/auto-moto">Avto-Moto</a><a class="nav-item" href="/ict">İKT</a><a class="nav-item" href="/turism">Turizm</a><a class="nav-item" href="/interesting">Maraqlı</a><a class="nav-item" href="/interview">Müsahibə</a><a class="nav-item" href="/tv">Baku TV</a><a class="nav-item" href="/cinemaplus">CinemaPlus</a>
+                </nav>
+            </div>
+            <div class="nav-banner-container">
+                <div class="wrapper">
+                    <a class="nav-item nav-item_coronavirus" href="/coronavirus-azerbaijan">Azərbaycanda koronavirusla bağlı xəbərlər</a><a class="nav-item nav-item_coronavirus_stats" href="/pages/coronastats">Koronavirus Onlayn Statistika</a><a class="nav-item nav-item_all" href="">Bütün xəbərlər</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="coronavirus-mobile">
+        <div class="wrapper">
+            <a class="nav-coronavirus" href="/coronavirus-azerbaijan">Azərbaycanda koronavirusla bağlı xəbərlər</a>
+            <a class="nav-coronavirus-stats" href="/pages/coronastats">Koronavirus Onlayn Statistika</a>
+        </div>
+    </div>
+    <main>
+        <div class="wrapper">
+            @RenderBody()
+        </div>
+    </main>
+    <div class="footer-container">
+        <footer class="footer wrapper">
+            <div class="copyright-email">
+                <span class="copyright">© Oxu.az, 2013—2020</span>Məlumatdan istifadə etdikdə istinad mütləqdir. <nobr>(012) 525-49-00, (055) 224-76-86, </nobr>
+                <a class="footer-email" href="mailto:info@oxu.az%2C%20editor@oxu.az">info@oxu.az, editor@oxu.az</a>
+
+            </div>
+            <div class="social-logos">
+                <a class="social-logos-item social-logos-item_facebook" href="//facebook.com/421309791269484">Facebook</a>
+                <a class="social-logos-item social-logos-item_twitter" href="//twitter.com/oxuaz">Twitter</a>
+                <a class="social-logos-item social-logos-item_android" href="https://play.google.com/store/apps/details?id=az.start.android.oxu">Android App</a>
+                <a class="social-logos-item social-logos-item_ios" href="https://itunes.apple.com/app/id634362981">iOS App</a>
+            </div>
+        </footer>
+    </div>
+    <script src="~/js/jquery-3.5.1.min.js"></script>
+    <script src="~/js/script.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

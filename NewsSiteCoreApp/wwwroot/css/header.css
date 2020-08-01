@@ -1,0 +1,539 @@
+﻿@media (min-width: 768px) {
+    .coronavirus-mobile {
+        display: none !important;
+    }
+
+    .header-container {
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-holder {
+        display: none;
+        height: 135px;
+    }
+
+    .nav-container {
+        background-color: #222222;
+        -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    }
+
+        .nav-container::before {
+            top: 45px;
+            content: '';
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #454545;
+        }
+
+    .nav-toggle {
+        position: relative;
+        z-index: 1;
+        top: 14px;
+        vertical-align: top;
+        margin-left: 25px;
+        padding-left: 25px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #fff;
+        line-height: 20px;
+        font-size: 20px;
+        font-family: "Cond-ProMedium", Arial, sans-serif;
+        cursor: default;
+        opacity: 0;
+        display: inline-block;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+    }
+
+        .nav-toggle::before {
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+    .nav {
+        overflow: hidden;
+        max-height: 91px;
+        max-width: 900px;
+    }
+
+    .nav-item_current {
+        background-color: #454545;
+    }
+
+    .nav-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+    }
+
+    .nav-banner-container .nav-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+    }
+
+        .nav-banner-container .nav-item:last-child {
+            margin-right: 0;
+        }
+
+    .search-toggle {
+        display: none !important;
+    }
+
+    .nav-item:hover {
+        background-color: #454545;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .nav-container::after {
+        display: none !important;
+    }
+
+
+
+    .nav-item {
+        display: block !important;
+        padding-left: 10px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        background: url(//cdn.oxu.az/assets/divider-bb98aabcf0b216625e3b47f2ee70c396603bc7983c38acd6fb1b5a211d2498b6.png) no-repeat right top;
+    }
+
+    .body_nav_visible .nav {
+        left: -10px;
+        opacity: 1;
+        width: 215px;
+        overflow: visible;
+    }
+
+    .header {
+        padding: 15px 10px !important;
+        min-height: 34px !important;
+    }
+
+    .logo {
+        margin-left: 40px !important;
+    }
+
+    .nav-banner-container {
+        display: none !important;
+    }
+
+    .coronavirus-mobile {
+        display: block;
+        text-align: center;
+    }
+
+        .coronavirus-mobile .wrapper {
+            padding: 0 !important;
+        }
+
+        .coronavirus-mobile .nav-coronavirus, .coronavirus-mobile .nav-coronavirus-stats {
+            display: block;
+            padding: 20px 0;
+            background: pink;
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .coronavirus-mobile .nav-coronavirus-stats {
+            display: block;
+            padding: 20px 0;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    .header .wrapper {
+        position: relative !important;
+        z-index: 2 !important;
+        max-width: none !important;
+    }
+
+    .search-container {
+        display: none !important;
+    }
+
+    .wrapper {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
+    .nav {
+        position: absolute;
+        left: -260px;
+        top: 15px;
+        width: 1px;
+        height: 0;
+        overflow: hidden;
+        opacity: 1;
+        -webkit-transition: opacity 0.2s, left 0.2s;
+        transition: opacity 0.2s, left 0.2s;
+        text-align: left;
+        line-height: 34px;
+        background-image: url(~/);
+    }
+
+    .nav-toggle {
+        color: transparent;
+        font: 0/0 a;
+        text-shadow: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 45px;
+        height: 45px;
+        border-radius: 25px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 959px) {
+    .header .oxu-link {
+        display: none !important;
+    }
+
+    .header .social-logos {
+        display: none !important;
+    }
+
+    .header {
+        margin-bottom: 0 !important;
+    }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .nav-item {
+        background-image: url(//cdn.oxu.az/assets/divider@2x-3d28bf43b92af5058637e791f5dee9e42e4135b3c0f5abfd8b4fe307adaac233.png) !important;
+        background-size: auto 2px !important;
+    }
+}
+
+header {
+    position: relative;
+    z-index: 100001;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    background-color: #00193c;
+    background-image: url(/assets/images/header_bg-16b933a63f94b28290d368006e6a4901530e656b79339c9ed6de9321eb73a30a.png);
+}
+
+.header-container {
+    height: 45px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    background-color: #00193c;
+    background-image: url(/assets/images/header_bg-16b933a63f94b28290d368006e6a4901530e656b79339c9ed6de9321eb73a30a.png);
+}
+
+.wrapper {
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 940px;
+}
+
+.nav-container {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    font-family: "Cond-ProMedium", Arial, sans-serif;
+}
+
+    .nav-container::after {
+        top: 90px;
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #454545;
+    }
+
+.header-side {
+    float: right;
+    text-align: right;
+    font-family: "Cond-ProMedium", Arial, sans-serif;
+}
+
+    .header-side .oxu-link {
+        display: inline-block;
+        margin-top: 12px;
+        margin-right: 25px;
+        line-height: 22px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+.logo {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    position: relative;
+    z-index: 1;
+    top: 12px;
+    display: inline-block;
+    width: 125px;
+    height: 22px;
+    background-position: 0 0;
+    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    display: inline-block;
+}
+
+    .nav-toggle::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 15px;
+        background-position: 44.134078212290504% 87.68115942028986%;
+        background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+        background-repeat: no-repeat;
+    }
+
+.nav {
+    display: block;
+    line-height: 45px;
+}
+
+.nav-item {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.nav-banner-container {
+    overflow: hidden;
+    height: 45px;
+    background-color: #ededed;
+    line-height: 45px;
+}
+
+    .nav-banner-container .wrapper {
+        max-width: 940px;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .nav-banner-container .nav-item_coronavirus {
+        float: left;
+        color: red;
+        background-color: pink;
+        margin-right: 0 !important;
+    }
+
+    .nav-banner-container .nav-item_coronavirus_stats {
+        float: left;
+        color: white;
+        background-color: orange;
+    }
+
+.header .social-logos {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 25px;
+    padding-top: 1px;
+   
+}
+.header .social-logos-item {
+    margin-left: 20px;
+}
+.header .social-logos-item:first-child {
+    margin-left: 0;
+}
+.header .social-logos-item {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 11px;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}
+
+.social-logos-item:first-child {
+    margin-left: 0;
+}
+
+.header .social-logos-item_facebook {
+    width: 22px;
+    height: 22px;
+}
+
+.header .social-logos-item_facebook {
+    background-position: 58.857142857142854% 34.35114503816794%;
+}
+
+.header .social-logos-item_facebook {
+    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+}
+
+.header .social-logos-item_ios {
+    width: 20px;
+    height: 23px;
+    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+}
+
+.header .social-logos-item_twitter {
+    width: 27px;
+    height: 22px;
+    background-position: 37.64705882352941% 72.51908396946565%;
+}
+
+.header .social-logos-item_android {
+    width: 19px;
+    height: 23px;
+    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+}
+
+.header .social-logos-item_ios {
+    background-position: 58.19209039548023% 16.923076923076923%;
+}
+
+.header .social-logos-item_twitter {
+    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+}
+
+.search-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 226px;
+    height: 34px;
+    line-height: 34px\9;
+    margin: 0;
+    padding: 0 34px 0 8px;
+    outline: 0;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: none transparent;
+    color: #fff;
+    font-size: 18px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.search-container {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 6px;
+    padding-bottom: 5px;
+}
+
+.search-submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 34px;
+    height: 34px;
+    margin: 0 0 0 -34px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+    .search-submit::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-position: 51.41242937853107% 71.42857142857143%;
+        background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+        background-repeat: no-repeat;
+    }
+
+button {
+    -webkit-font-smoothing: antialiased;
+}
+
+.lang-switcher {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 45px;
+    margin-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.search-toggle {
+    display: inline-block;
+    height: 45px;
+    width: 32px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+    .search-toggle::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-position: 51.41242937853107% 71.42857142857143%;
+        background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+        background-repeat: no-repeat;
+    }

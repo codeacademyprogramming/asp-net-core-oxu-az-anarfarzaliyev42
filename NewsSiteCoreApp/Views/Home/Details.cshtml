@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+
+    Layout = "_Layout";
+
+
+}
+@section styles{
+    <link rel="stylesheet" href="~/css/news-details.css" />
+
+}
+@model News
+<div class="news-container">
+    <div class="news">
+        <div class="left-info">
+        <div class="when">
+            <div class="when-date">
+                <div class="date-day">@Model.Date.Day&nbsp;</div>
+                <div class="date-month">@Model.Date.ToString("MMM")</div>
+                <div class="date-year">@Model.Date.Year</div>
+            </div>
+            <div class="when-time">@Model.Date.ToString("HH:mm")</div>
+        </div>
+        <div class="stats" data-id="@Model.Id">
+            <div class="stats-item-container stats_views">
+                <span class="stats-item">@Model.Views</span>
+            </div>
+            <div class="stats-item-container stats-like-active stats_likes">
+                <span class="stats-item">@Model.Likes</span>
+            </div>
+            <div class="stats-item-container stats-like-active stats_dislikes">
+                <span class="stats-item">@Model.Dislikes</span>
+            </div>
+        </div>
+        </div>
+        <img alt=""
+             class="news-img"
+             src="@Url.Content($"~/news-images/{Model.FileName}")" />
+
+        <div class="banner">
+            <a href="http://www.virtualkarabakh.az">
+                <img src="https://cdn.oxu.az/assets/virtual_karabakh-605cf02fb76ac210bc1eb9ba1e93be46a88eec0da9461b289506a3f277f9c359.jpg" alt="Virtual karabakh">
+            </a>
+        </div>
+        <div class="news-content">
+            <h1>“@Model.Title“</h1>
+            <p>
+                @Model.Content
+            </p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(function () {
+          
+            var headerContainer = $(".header-container");
+            var sticky = $(headerContainer).offset().top;
+            var leftInfo = $(".left-info");
+            var sticky2 = $(leftInfo).offset().top;
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() >sticky) {
+                    $(headerContainer).addClass("sticky")
+              
+                } else if ($(window).scrollTop() == sticky) {
+                    $(headerContainer).removeClass("sticky");
+                    
+                }
+                if ($(window).scrollTop()+90>= sticky2) {
+                    $(leftInfo).addClass("sticky2")
+                } else {
+                    $(leftInfo).removeClass("sticky2");
+                }
+            })
+        })
+    </script>
+    
+
+}
+
+
