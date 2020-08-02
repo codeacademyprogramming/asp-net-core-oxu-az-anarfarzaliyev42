@@ -10,7 +10,7 @@ using NewsSiteCoreApp.Contexts;
 namespace NewsSiteCoreApp.Migrations
 {
     [DbContext(typeof(NewsContext))]
-    [Migration("20200728164509_first")]
+    [Migration("20200802205409_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,13 +35,22 @@ namespace NewsSiteCoreApp.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Dislikes")
+                        .HasColumnType("int");
+
                     b.Property<string>("FileName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Views")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

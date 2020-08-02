@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YAqb3OBm0REkv413uwcWKorhwUHnnz8nabgEmcmO1+pNVNaR27ELvTEuWTW1SD7Byt3KZyZf2EVx6S/M4tVmAg==",
+  "dgSpecHash": "dghvQdQUmQNTQLohYTGEsRV4OYBq56P/GGkhpbV0MIKYo0d39x+NUuvbkZjlsI67Kg9CQHdvJGZtw0LFx/5YQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\bootstrap\\4.5.0\\bootstrap.4.5.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",

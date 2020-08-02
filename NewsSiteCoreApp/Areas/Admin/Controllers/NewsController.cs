@@ -101,11 +101,11 @@ namespace NewsSiteCoreApp.Areas.Admin.Controllers
         }
         private void CopyToImageFolder(News news)
         {
-            //var fileNameWithoutEx = Path.GetFileNameWithoutExtension(news.FormFile.FileName);
-            //var fileNameEx = Path.GetExtension(news.FormFile.FileName);
-            //var date = DateTime.Now.ToString("MM dd yyyy, hh mm ss tt");
-            //$"{fileNameWithoutEx}{fileNameEx}"
-            var fileName = news.FormFile.FileName;
+            var fileNameWithoutEx = Path.GetFileNameWithoutExtension(news.FormFile.FileName);
+            var fileNameEx = Path.GetExtension(news.FormFile.FileName);
+            var date = DateTime.Now.ToString("MM dd yyyy, hh mm ss tt");
+           
+            var fileName = $"{fileNameWithoutEx}-{date}{fileNameEx}";
             var rootPath = Path.Combine(_webhost.WebRootPath, "news-images", fileName);
             news.FileName = fileName;
             using (var fileStream = new FileStream(rootPath, FileMode.Create))

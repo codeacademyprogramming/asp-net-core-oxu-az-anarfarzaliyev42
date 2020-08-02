@@ -4,8 +4,44 @@
 @model List<News>
 @section styles{
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/slider.css" />
 }
+<div class="slider-container">
 
+
+    <div class="slider">
+        <div class="slider-arrow  slider-arrow_prev">
+            <i class="fas fa-chevron-left slider-left-arrow"></i>
+        </div>
+        <div class="slider-arrow slider-arrow_next">   <i class="fas fa-chevron-right slider-right-arrow"></i></div>
+
+        <div class="slider-content">
+            @foreach (var item in Model)
+            {
+                <a class="slider-item" href="/home/details/@item.Id">
+                    <img alt=""
+                         class="slider-item-img"
+                         src='@Url.Content($"~/news-images/{item.FileName}")' />
+                    <div class="slider-item-content">
+                        <div class="slider-item-meta-container">
+                            <div class="slider-item-meta">
+                                <span class="slider-item-date"> @item.Date.Day @item.Date.ToString("MMM")</span>
+                                <span class="slider-item-time">@item.Date.ToString("HH:mm")</span>
+                                <span class="slider-item-views">@item.Views</span>
+                            </div>
+                        </div>
+                        <div class="slider-item-text">
+                            <div class="slider-item-title">
+                                @item.Title
+                            </div>
+                            <div class="slider-item-description"></div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
 <section class="news-list">
     @foreach (var news in Model)
     {
@@ -59,8 +95,64 @@
                 else if ($(window).scrollTop() == sticky) {
                     $(headerContainer).removeClass("sticky");
                 }
-               
+
             })
+            //Slider written here
+            var countOfSliderImage = $(".slider-content .slider-item").length;
+            var margin = 0;
+            var i = 0;
+            setInterval(function () { addMargin() }, 5000);
+
+            $(document).on("click", ".slider-arrow", function () {
+                if ($(this).hasClass("slider-arrow_next")) {
+                    if ((countOfSliderImage - 1) == i) {
+                        margin = 0
+                        i = 0
+                    }
+                    else {
+                        margin -= 620;
+                        i++
+                    }
+                    console.log(i)
+                    $(".slider-content").css({
+                        marginLeft: '' + margin + '' + 'px'
+
+                    })
+                }
+                else if ($(this).hasClass("slider-arrow_prev")) {
+                    console.log("asd")
+
+                    if (i == 0) {
+                        margin = (-620) * (countOfSliderImage - 1)
+                        i = countOfSliderImage - 1
+                    }
+                    else {
+                        margin += 620;
+                        i--
+                    }
+                    console.log(i)
+                    $(".slider-content").css({
+                        marginLeft: '' + margin + '' + 'px'
+
+                    })
+                }
+            })
+            function addMargin() {
+
+                if ((countOfSliderImage - 1) == i) {
+                    margin = 0
+                    i = 0
+                }
+                else {
+                    margin -= 620;
+                    i++
+                }
+                console.log(i)
+                $(".slider-content").css({
+                    marginLeft: '' + margin + '' + 'px'
+
+                })
+            }
         })
     </script>
 

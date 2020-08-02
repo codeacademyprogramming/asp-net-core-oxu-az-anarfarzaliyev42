@@ -16,7 +16,10 @@ namespace NewsSiteCoreApp.Migrations
                     Title = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(4000)", nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
-                    FileName = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    FileName = table.Column<string>(nullable: false),
+                    Likes = table.Column<int>(nullable: false),
+                    Dislikes = table.Column<int>(nullable: false),
+                    Views = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
