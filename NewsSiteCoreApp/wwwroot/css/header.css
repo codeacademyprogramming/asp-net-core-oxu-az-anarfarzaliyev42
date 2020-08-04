@@ -98,13 +98,28 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .nav-container::after {
         display: none !important;
     }
 
-
-
+    .header-primary_search .search-container {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 48px;
+        display: block !important;
+        width: 100%;
+    }
+    .header-primary_search .search-input {
+        width: 100% !important;
+    }
+    .header-primary {
+        height: 45px;
+        transform: translateZ(0);
+        background-color: #00193c;
+        background-image: url(//cdn.oxu.az/assets/header_bg-16b933a….png);
+    }
     .nav-item {
         display: block !important;
         padding-left: 10px !important;
@@ -204,6 +219,7 @@
         z-index: 1;
     }
 }
+
 @media screen and (max-width: 959px) {
     .header .oxu-link {
         display: none !important;
@@ -217,6 +233,7 @@
         margin-bottom: 0 !important;
     }
 }
+
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
     .nav-item {
         background-image: url(//cdn.oxu.az/assets/divider@2x-3d28bf43b92af5058637e791f5dee9e42e4135b3c0f5abfd8b4fe307adaac233.png) !important;
@@ -272,6 +289,7 @@ header {
 .header-side {
     float: right;
     text-align: right;
+
     font-family: "Cond-ProMedium", Arial, sans-serif;
 }
 
@@ -365,14 +383,16 @@ header {
     vertical-align: top;
     margin-right: 25px;
     padding-top: 1px;
-   
 }
+
 .header .social-logos-item {
     margin-left: 20px;
 }
-.header .social-logos-item:first-child {
-    margin-left: 0;
-}
+
+    .header .social-logos-item:first-child {
+        margin-left: 0;
+    }
+
 .header .social-logos-item {
     color: transparent;
     font: 0/0 a;
@@ -537,3 +557,10 @@ button {
         background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
         background-repeat: no-repeat;
     }
+.user-name {
+    font-size: 19px;
+    color: white;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}

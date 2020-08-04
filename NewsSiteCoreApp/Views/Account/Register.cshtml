@@ -1,0 +1,83 @@
+﻿@model NewsSiteCoreApp.Models.RegisterViewModel
+@{
+    Layout = null;
+    var returnUrl = @Context.Request.Query["returnurl"];
+}
+@section styles{
+    <link rel="stylesheet" href="~/css/news-details.css" />
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/fonts/material-icon/css/material-design-iconic-font.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/css/regstyle.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form asp-action="Register" asp-route-returnurl="@returnUrl" class="register-form val-summary" id="register-form">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input asp-for="Username" type="text" placeholder="Your Name">
+                                <span asp-validation-for="Username" class="text-danger error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email"><i class="zmdi zmdi-email"></i></label>
+                                <input asp-for="Email" type="email" placeholder="Your Email">
+                                <span asp-validation-for="Email" class="text-danger error-text"></span>
+                            </div> 
+                            <div class="form-group">
+                                <label asp-for="Password"><i class="zmdi zmdi-lock"></i></label>
+                                <input asp-for="Password" type="password" placeholder="Password">
+                                <span asp-validation-for="Password" class="text-danger error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input asp-for="ConfirmPassword" type="password" placeholder="Repeat your password">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="isAgree" type="checkbox"  class="agree-term">
+                                <label asp-for="isAgree"  class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <span asp-validation-for="isAgree" class="text-danger error-text-isAgree"></span>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="~/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a asp-action="Login" asp-controller="Account" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

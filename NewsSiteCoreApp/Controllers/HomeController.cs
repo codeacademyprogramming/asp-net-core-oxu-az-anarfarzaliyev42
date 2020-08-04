@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NewsSiteCoreApp.Abstractions;
@@ -24,7 +25,7 @@ namespace NewsSiteCoreApp.Controllers
         {
             return View(_newsRepository.GetAll());
         }
-
+        [Authorize]
         public IActionResult Details(int id)
         {
             News news = _newsRepository.GetNewsById(id);

@@ -10,41 +10,41 @@ namespace NewsSiteCoreApp.Models
 {
     public class NewsRepository:INewsRepository
     {
-        NewsContext _newsContext;
+        ApplicationContext _db;
 
-        public NewsRepository(NewsContext newsContext)
+        public NewsRepository(ApplicationContext db)
         {
-            _newsContext = newsContext;
+            _db = db;
         }
 
         public void Create(News news)
         {
-            _newsContext.News.Add(news);
-            _newsContext.SaveChanges();
+            _db.News.Add(news);
+            _db.SaveChanges();
         }
 
         public void Edit(News news)
         {
-            _newsContext.ChangeTracker.Entries().Where(e => e.Entity != null).ToList().ForEach(e => e.State = EntityState.Detached);
-            _newsContext.Entry(news).State = EntityState.Modified;
-            _newsContext.SaveChanges();
+            _db.ChangeTracker.Entries().Where(e => e.Entity != null).ToList().ForEach(e => e.State = EntityState.Detached);
+            _db.Entry(news).State = EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public List<News> GetAll()
         {
-            return _newsContext.News.ToList();
+            return _db.News.ToList();
         }
 
         public void Remove(News news)
         {
-            _newsContext.News.Remove(news);
-            _newsContext.SaveChanges();
+            _db.News.Remove(news);
+            _db.SaveChanges();
         }
         public bool AddLike(int id)
         {
-            News news=_newsContext.News.Find(id);
+            News news=_db.News.Find(id);
             news.Likes += 1;
-             if (_newsContext.SaveChanges()>0)
+             if (_db.SaveChanges()>0)
              {
                  return true;
              }
@@ -53,9 +53,9 @@ namespace NewsSiteCoreApp.Models
 
         public bool AddDislike(int id)
         {
-            News news = _newsContext.News.Find(id);
+            News news = _db.News.Find(id);
             news.Dislikes += 1;
-            if (_newsContext.SaveChanges() > 0)
+            if (_db.SaveChanges() > 0)
             {
                 return true;
             }
@@ -64,9 +64,9 @@ namespace NewsSiteCoreApp.Models
 
         public bool GetView(int id)
         {
-            News news = _newsContext.News.Find(id);
+            News news = _db.News.Find(id);
             news.Views += 1;
-            if (_newsContext.SaveChanges() > 0)
+            if (_db.SaveChanges() > 0)
             {
                 return true;
             }
@@ -75,7 +75,7 @@ namespace NewsSiteCoreApp.Models
 
         public News GetNewsById(int id)
         {
-            News news = _newsContext.News.Find(id);
+            News news = _db.News.Find(id);
             if ( news!= null)
             {
                 return news;
