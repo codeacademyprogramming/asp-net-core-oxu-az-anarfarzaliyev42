@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj": {}
+    "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj": {
+    "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
         "projectName": "NewsSiteCoreApp",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
+        "projectPath": "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\NewsSiteCoreApp.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\NewsSiteCoreApp\\NewsSiteCoreApp\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Source\\Repos\\asp-net-core-oxu-az-anarfarzaliyev42\\NewsSiteCoreApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
