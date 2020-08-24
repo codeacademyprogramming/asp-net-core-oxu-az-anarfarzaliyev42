@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,8 +10,10 @@ namespace NewsSiteCoreApp.Models
     public class RegisterViewModel
     {
         [Required]
+        [Remote(action: "IsUsernameInUse",controller:"Account")]
         public string Username { get; set; }
         [Required]
+        [Remote(action: "IsEmailInUse","Account")]
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; }
         [DataType(DataType.Password)]

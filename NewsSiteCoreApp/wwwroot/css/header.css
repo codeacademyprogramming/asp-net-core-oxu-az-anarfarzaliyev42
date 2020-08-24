@@ -436,9 +436,13 @@ header {
 .header .social-logos-item_android {
     width: 19px;
     height: 23px;
-    background-image: url(//cdn.oxu.az/assets/sprite-14779aea9a2609defbd213c565a1d0593922d6e2ca321f275b01c9afcb10310f.svg);
+    
 }
 
+.header .social-logos-item_android i {
+    font-size:25px;
+    color:white;
+}
 .header .social-logos-item_ios {
     background-position: 58.19209039548023% 16.923076923076923%;
 }

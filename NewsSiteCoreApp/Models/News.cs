@@ -23,7 +23,8 @@ namespace NewsSiteCoreApp.Models
     
         [Required]
         public string FileName { get; set; }
-
+        [Display(Name ="Photo")]
+        [Required(ErrorMessage ="Photo is required")]
         [NotMapped]
         public IFormFile FormFile { get; set; }
 

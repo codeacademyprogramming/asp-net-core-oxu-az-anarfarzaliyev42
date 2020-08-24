@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NewsSiteCoreApp.Models;
@@ -81,6 +82,31 @@ namespace NewsSiteCoreApp.Controllers
                 ModelState.AddModelError("isAgree", "Please agree with policy");
             }
             return View(registerViewModel);
+        }
+
+        [AcceptVerbs("Get", "Post")]
+
+        public async Task<IActionResult> IsUsernameInUse(string username)
+        {
+            var user = await userManager.FindByNameAsync(username);
+            if (user == null)
+            {
+                return Json(true);
+            }
+
+            return Json($"Username {username} is alerady taken");
+        }
+        [AcceptVerbs("Get", "Post")]
+
+        public async Task<IActionResult> IsEmailInUse(string email)
+        {
+            var user = await userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return Json(true);
+            }
+
+            return Json($"Email {email} is alerady taken");
         }
     }
 }

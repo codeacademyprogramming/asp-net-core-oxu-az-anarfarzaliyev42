@@ -28,6 +28,7 @@ namespace NewsSiteCoreApp.Controllers
         [Authorize]
         public IActionResult Details(int id)
         {
+            
             News news = _newsRepository.GetNewsById(id);
             if (news != null)
             {
@@ -37,15 +38,11 @@ namespace NewsSiteCoreApp.Controllers
                 }
                
             }
-            return RedirectToAction("Error");
+            return RedirectToAction("Error","NotFound");
             
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
         [HttpPost]
         public JsonResult AddLike(int id)
         {

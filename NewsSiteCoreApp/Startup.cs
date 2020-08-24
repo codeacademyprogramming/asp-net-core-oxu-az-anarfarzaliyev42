@@ -31,14 +31,13 @@ namespace NewsSiteCoreApp
             services.AddControllersWithViews();
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddScoped(typeof(INewsRepository), typeof(NewsRepository));
-            services.AddDbContext<ApplicationContext>(x => x.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=ApplicationDB"));
+            services.AddDbContext<ApplicationContext>(x => x.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;  Initial Catalog=ApplicationDB"));
             services.AddIdentity<IdentityUser, IdentityRole>(options=>
             {
                 options.User.RequireUniqueEmail = true;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<ApplicationContext>();
-
             
         }
 
@@ -51,7 +50,9 @@ namespace NewsSiteCoreApp
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+            
+                app.UseExceptionHandler("/Error");
+               
             }
             app.UseStaticFiles();
 
